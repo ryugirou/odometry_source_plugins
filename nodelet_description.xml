@@ -1,0 +1,5 @@
+<library path="lib/libodometry_source_plugins">
+  <class name="odometry_source_plugins/OdomBroadcaster" type="odometry_source_plugins::OdomBroadcaster" base_class_type="nodelet::Nodelet">
+    <description>odom_broadcaster</description>
+  </class>
+</library>
