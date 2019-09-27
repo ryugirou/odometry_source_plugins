@@ -55,11 +55,12 @@ namespace odometry_source_plugins{
   
     _yaw = _x = _y = 0.0;
   
+    odom_pub = nh.advertise<nav_msgs::Odometry>("odom", 1);
+
     odom_yaw_sub = nh.subscribe<std_msgs::Float32>("odom/yaw", 10, &OdomBroadcaster::odomYawCallback, this);
     odom_x_sub = nh.subscribe<std_msgs::Float32>("odom/x", 10, &OdomBroadcaster::odomXCallback, this);
     odom_y_sub = nh.subscribe<std_msgs::Float32>("odom/y", 10, &OdomBroadcaster::odomYCallback, this);
   
-    odom_pub = nh.advertise<nav_msgs::Odometry>("odom", 1);
   
     _nh.param<std::string>("odom_frame", odom_frame, "odom");
     _nh.param<std::string>("base_frame", base_frame, "base_link");

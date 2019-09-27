@@ -108,8 +108,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES odometry_source_plugins
-#  CATKIN_DEPENDS geometry_msgs nav_msgs nodelet pluginlib std_msgs tf
+  LIBRARIES odometry_source_plugins
+  CATKIN_DEPENDS geometry_msgs nav_msgs nodelet pluginlib std_msgs tf
 #  DEPENDS system_lib
 )
 
